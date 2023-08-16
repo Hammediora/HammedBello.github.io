@@ -45,7 +45,7 @@ header {
 
 .profile-picture {
     margin: 20px auto;
-    border: 3px solid #fff; /* Added a border to make the image pop out on the blue background */
+    border: 3px solid #fff;
     width: 250px;
     border-radius: 50%;
 }
