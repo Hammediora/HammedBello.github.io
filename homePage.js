@@ -109,6 +109,10 @@ function greet(name) {
 
 const openGameButton = document.getElementById("openGameModal");  // assuming your button has this ID
 openGameButton.addEventListener('click', openGameModal);
+function openGameModal() {
+    modal.style.display = "block";
+    startGame();
+}
 
 function startGame() {
     let randomIndex = Math.floor(Math.random() * codeSnippets.length);
