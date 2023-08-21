@@ -30,15 +30,9 @@ $(document).ready(function () {
 });
 
 // Get the modal, button, and span elements
-var modal = document.getElementById("gameModal");
-var btn = document.getElementById("openGameModal");
-var span = document.getElementsByClassName("close")[0];
-
-// When the button is clicked, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-    startGame();
-}
+const modal = document.getElementById("gameModal");
+const span = document.getElementsByClassName("close")[0];
+const closeSpan = document.querySelector(".close");
 
 // When the close button (x) is clicked, close the modal
 span.onclick = function() {
@@ -50,6 +44,13 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+// Add event listener for the close button
+closeSpan.addEventListener('click', closeModal);
+
+function closeModal() {
+    modal.style.display = "none";
 }
 
 const codeSnippets = [
@@ -106,6 +107,12 @@ function greet(name) {
     }
 ];
 
+const openGameButton = document.getElementById("openGameModal");  // assuming your button has this ID
+openGameButton.addEventListener('click', openGameModal);
+function openGameModal() {
+    modal.style.display = "block";
+    startGame();
+}
 
 function startGame() {
     let randomIndex = Math.floor(Math.random() * codeSnippets.length);
