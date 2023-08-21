@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f6f6f6; /* Added a soft background color */
+    background-color: #f6f6f6; 
 }
 
 header {
@@ -36,7 +36,7 @@ header {
     font-size: 18px;
     color: #333;
     font-weight: bold;
-    transition: color 0.3s; /* Smooth transition on hover */
+    transition: color 0.3s; 
 }
 
 .navbar-nav .nav-link:hover {
@@ -134,7 +134,7 @@ footer {
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    z-index: 1000; /* Ensures it's always on top */
+    z-index: 1000; 
 }
 
 #scrollBtn:hover {
@@ -143,7 +143,7 @@ footer {
 }
 
 /* General Modal Styling */
-.modal {
+#gameModal {
     display: none;
     position: fixed;
     z-index: 1000;
