@@ -22,10 +22,19 @@ header {
     margin-bottom: 0;
 }
 
-.contact-info {
+.contact-info a {
     font-size: 14px;
-    color: #000000;
+    color: #ffffff;
 }
+
+.contact-info a:hover{
+    color: #dad326;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
 
 .navbar-nav {
     justify-content: center;
@@ -95,6 +104,17 @@ footer {
     padding: 10px 0;
     margin-top: 30px;
     box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+footer a:hover {
+    color: yellow;
+    text-decoration: underline;
 }
 
 .unit-image img {
