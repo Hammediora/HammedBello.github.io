@@ -25,6 +25,7 @@ header {
 .contact-info a {
     font-size: 14px;
     color: #ffffff;
+    transition: color 0.3s ease;
 }
 
 .contact-info a:hover{
@@ -57,6 +58,7 @@ header {
     border: 3px solid #fff;
     width: 250px;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .brand-info {
@@ -95,6 +97,47 @@ ul.list-unstyled li:before {
     top: 5px;
     font-size: 14px;
     color: #007bff;
+}
+
+.project-item {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-item h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.project-item a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.project-item a:hover {
+    background-color: #0056b3;
 }
 
 footer {
@@ -143,6 +186,7 @@ footer a:hover {
 
 /* Scroll to top button */
 #scrollBtn {
+    display: none;
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -153,6 +197,7 @@ footer a:hover {
     border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, transform 0.3s;
     z-index: 1000; /* Ensures it's always on top */
 }
@@ -265,4 +310,23 @@ button:hover {
     font-size: 20px;
     font-weight: bold;
     margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    .profile-picture {
+        width: 200px; /* Smaller profile picture on smaller screens */
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
 }
