@@ -1,41 +1,40 @@
-/* Main Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    background-color: #f6f6f6; /* Added a soft background color */
+    background-color: #000;
 }
 
 header {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #000;
+    color: #d4af37;
     padding: 20px 0;
 }
 
 .navbar {
-    background-color: #f8f9fa;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #000;
+    box-shadow: 0px 2px 8px rgba(255, 215, 0, 0.2);
 }
 
 .navbar-brand {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 0;
+    color: #d4af37;
 }
 
 .contact-info a {
     font-size: 14px;
-    color: #ffffff;
+    color: #d4af37;
     transition: color 0.3s ease;
 }
 
-.contact-info a:hover{
-    color: #dad326;
+.contact-info a:hover {
+    color: #fff;
     font-weight: bold;
-    background-color: rgb(255, 255, 255);
+    background-color: #d4af37;
     padding: 2px 4px;
     border-radius: 4px;
 }
-
 
 .navbar-nav {
     justify-content: center;
@@ -44,18 +43,18 @@ header {
 
 .navbar-nav .nav-link {
     font-size: 18px;
-    color: #333;
+    color: #d4af37;
     font-weight: bold;
-    transition: color 0.3s; /* Smooth transition on hover */
+    transition: color 0.3s;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #007bff;
+    color: #fff;
 }
 
 .profile-picture {
     margin: 20px auto;
-    border: 3px solid #fff;
+    border: 3px solid #d4af37;
     width: 250px;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -74,8 +73,8 @@ main.container {
 }
 
 h2 {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
+    color: #d4af37;
+    border-bottom: 2px solid #d4af37;
     padding-bottom: 5px;
     margin-top: 20px;
 }
@@ -96,8 +95,9 @@ ul.list-unstyled li:before {
     left: 0;
     top: 5px;
     font-size: 14px;
-    color: #007bff;
+    color: #d4af37;
 }
+
 
 .project-item {
     background-color: #ffffff;
@@ -110,12 +110,12 @@ ul.list-unstyled li:before {
 }
 
 .project-item:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .project-item h3 {
-    color: #007bff;
+    color: #d4af37;
     margin-bottom: 10px;
 }
 
@@ -127,7 +127,7 @@ ul.list-unstyled li:before {
 
 .project-item a {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #d4af37;
     color: #ffffff;
     padding: 8px 12px;
     border-radius: 4px;
@@ -137,11 +137,12 @@ ul.list-unstyled li:before {
 }
 
 .project-item a:hover {
-    background-color: #0056b3;
+    background-color: #d4af37;
 }
 
+
 footer {
-    background-color: #007bff;
+    background-color: #000;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -150,13 +151,13 @@ footer {
 }
 
 footer a {
-    color: white;
+    color: #d4af37;
     text-decoration: none;
     padding: 5px;
 }
 
 footer a:hover {
-    color: yellow;
+    color: #fff;
     text-decoration: underline;
 }
 
@@ -168,29 +169,12 @@ footer a:hover {
     transform: scale(1.05);
 }
 
-#contact-info {
-    margin-top: 30px;
-}
-
-#contact-info h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #1d1d1f;
-}
-
-#contact-info p {
-    font-size: 18px;
-    color: #1d1d1f;
-    margin-bottom: 10px;
-}
-
-/* Scroll to top button */
 #scrollBtn {
     display: none;
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #007bff;
+    background-color: #d4af37;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -199,16 +183,29 @@ footer a:hover {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, transform 0.3s;
-    z-index: 1000; /* Ensures it's always on top */
+    z-index: 1000;
 }
 
 #scrollBtn:hover {
-    background-color: #0056b3;
+    background-color: #b29600;
     transform: scale(1.1);
 }
 
 /* General Modal Styling */
 #gameModal {
+    display: none;
+    position: fixed;
+    z-index: 5000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* The Modal (background) */
+.modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -221,7 +218,6 @@ footer a:hover {
 }
 
 .modal-content {
-    position: relative;
     background-color: #fefefe;
     margin: 5% auto;
     border: 1px solid #888;
@@ -231,7 +227,6 @@ footer a:hover {
     animation-duration: 0.4s;
 }
 
-/* The Close Button (x) */
 .close {
     color: #aaa;
     float: right;
@@ -246,7 +241,6 @@ footer a:hover {
     cursor: pointer;
 }
 
-
 @keyframes animateModal {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
@@ -260,7 +254,7 @@ footer a:hover {
 }
 
 #fun-game h2 {
-    color: #007bff;
+    color: #d4af37;
     text-align: center;
 }
 
@@ -271,7 +265,7 @@ footer a:hover {
 }
 
 #fun-game button {
-    background-color: #007bff;
+    background-color: #d4af37;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -282,7 +276,7 @@ footer a:hover {
 }
 
 #fun-game button:hover {
-    background-color: #0056b3;
+    background-color: #b29600;
 }
 
 #code-snippet {
@@ -292,10 +286,16 @@ footer a:hover {
     border: 1px solid #ddd;
 }
 
+#game-result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
 button {
     padding: 10px 15px;
     margin: 10px;
-    background-color: #007bff;
+    background-color: #b29600;
     color: white;
     border: none;
     cursor: pointer;
@@ -303,17 +303,13 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #b29600;
 }
 
-#game-result {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+    }
     .navbar-nav .nav-link {
         font-size: 16px;
     }
@@ -329,4 +325,48 @@ button:hover {
     footer {
         padding: 15px 0;
     }
+}
+
+.modal {
+    position: fixed;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    height: auto;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 5px;
+}
+
+#contactModal {
+    
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+
+}
+
+#contactModal h2 {
+    color: #d4af37;
+}
+
+#contactModal label {
+    color: #333;
+    font-weight: bold;
+}
+
+#contactModal input[type="text"],
+#contactModal input[type="email"],
+#contactModal textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
